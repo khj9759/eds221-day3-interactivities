@@ -10,7 +10,7 @@ editor: visual
 
 Create an object called `pm2_5` with a value of 48 (representing Particulate Matter 2.5, an indicator for air quality, in μgm3���3 (see more about PM2.5 [**here**](https://www3.epa.gov/region1/airquality/pm-aq-standards.html)).
 
-Write an `if - else if - else` statement that returns \"Low to moderate risk\" if `pm2_5` (for Particulate Matter 2.5) is less than 100, \"Unhealthy for sensitive groups\" if PM 2.5 is 100 \<= pm2_5 \< 150, and \"Health risk present\" if PM 2.5 is \>= 150.
+Write an `if - else if - else` statement that returns "Low to moderate risk" if `pm2_5` (for Particulate Matter 2.5) is less than 100, "Unhealthy for sensitive groups" if PM 2.5 is 100 \<= pm2_5 \< 150, and "Health risk present" if PM 2.5 is \>= 150.
 
 Test by changing the value of your pm2_5 object and re-running your statement to check.
 
@@ -26,7 +26,7 @@ if (pm2_5 < 100) {
 
 #### **Task 2**
 
-Store the string \"blue whale\" as an object called `species`. Write an if statement that returns \"You found a whale!\" if the string \"whale\" is detected in species, otherwise return nothing. Test by changing the species string & re-running to see output.
+Store the string "blue whale" as an object called `species`. Write an if statement that returns "You found a whale!" if the string "whale" is detected in species, otherwise return nothing. Test by changing the species string & re-running to see output.
 
 ```{r}
 species <- "blue whale"
@@ -38,7 +38,7 @@ if (str_detect(species,"whale")) {
 
 #### **Task 3**
 
-Store the base price of a burrito as `base_burrito` with a value of 6.50. Store `main_ingredient` with a starting string of \"veggie.\" Write a statement that will return the price of a burrito based on what a user specifies as \"main_ingredient\" (either \"veggie\", \"chicken\" or \"steak\") given the following:
+Store the base price of a burrito as `base_burrito` with a value of 6.50. Store `main_ingredient` with a starting string of "veggie." Write a statement that will return the price of a burrito based on what a user specifies as "main_ingredient" (either "veggie", "chicken" or "steak") given the following:
 
 -   A veggie burrito is the cost of a base burrito
 
@@ -64,18 +64,19 @@ Create a new vector called `fish` that contains the values `8, 10, 12, 23` repre
 
 ```{r}
 fish <- c(8, 10, 12, 23)
-fish_tank <- c("goldfish", "tetras", "guppies", "mollies")
+# fish_tank <- c("goldfish", "tetras", "guppies", "mollies")
 
 for (i in seq_along(fish)){
-  prop_fish = fish[i]/mean(fish)
+  prop_fish = fish[i]/sum(fish)
   print(prop_fish)
 }
-  
+
+
 ```
 
 #### **Task 5**
 
-There is an existing vector in R called `month.name` that contains all month names (just ry running `month.name` in the Console to check it out). **Write a for loop** that iterates over all months in `month.name` and prints \"January is month 1,\" \"February is month 2\", etc.
+There is an existing vector in R called `month.name` that contains all month names (just ry running `month.name` in the Console to check it out). **Write a for loop** that iterates over all months in `month.name` and prints "January is month 1," "February is month 2", etc.
 
 **Hint:** you can index values in the `month.name` vector just like you would any other vector (e.g., try running `month.name[5]`).
 

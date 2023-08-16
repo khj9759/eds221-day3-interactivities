@@ -1,0 +1,62 @@
+---
+title: "toolik_chem"
+format: html
+editor: visual
+---
+
+## 
+
+```{r}
+library(tidyverse)
+library(here)
+library(janitor)
+```
+
+```{r}
+toolik_biochem <- read_csv(here("data","../data/2011_Kling_Akchem.csv"),na=".") %>% 
+  clean_names() 
+```
+
+```{r}
+inlet_biochem <- toolik_biochem %>%
+  filter(site == "Toolik Inlet") %>%
+    select(p_h,co2_u_m,nh4_u_m) 
+inlet_biochem
+```
+
+```{r}
+
+# for loop
+for (i in seq_along(inlet_biochem)) {
+  if (is.numeric(inlet_biochem[[i]])) {
+    inlet_biochem_mean <- mean(inlet_biochem[[i]], na.rm = TRUE)
+    print(inlet_biochem_mean)
+  }
+}
+```
+
+```{r}
+# apply
+apply(inlet_biochem,2,mean, na.rm=TRUE)
+```
+
+```{r}
+
+```
+
+```{r}
+# across
+inlet_biochem |> 
+summarize(
+  across(where(is.numeric), mean, na.rm=TRUE)
+  )
+```
+
+```{r}
+inlet_biochem
+```
+
+```{r}
+apply(inlet_biochem,2,mean)
+
+```
