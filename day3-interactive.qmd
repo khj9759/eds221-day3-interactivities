@@ -4,6 +4,10 @@ format: html
 editor: visual
 ---
 
+```{r}
+library(palmerpenguins)
+```
+
 ## Conditional statement
 
 ```{r}
@@ -75,4 +79,20 @@ for (i in seq_along(height)){
   standardize_ht = height[i]/mean(height)
   print(standardize_ht)
 }
+```
+
+### write a for lop with a conditional (if) statement that returns the mean of all NUMERIC variables in the penguins data set
+
+-   is.numeric (asks is this thing numeric?)
+
+-   mean(vec, na.rm= TRUE)
+
+```{r}
+for (i in seq_along(penguins)) {
+  if (is.numeric(penguins[[i]])) {
+    penguin_mean <- mean(penguins[[i]], na.rm = TRUE)
+    print(penguin_mean)
+  }
+}
+
 ```
