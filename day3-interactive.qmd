@@ -105,7 +105,7 @@ Use apply() to iterate over rows or columns, MARGIN = 1 (rows), MARGIN=2 (column
 ```{r}
 apply(X=mtcars, MARGIN=2, FUN=median)
 
-apply(mtcars,2,median)
+apply(mtcars,2,median, na.rm = TRUE)
 ```
 
 ## dplyr::across()
