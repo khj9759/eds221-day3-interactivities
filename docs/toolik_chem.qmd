@@ -4,8 +4,6 @@ format: html
 editor: visual
 ---
 
-## 
-
 ```{r}
 library(tidyverse)
 library(here)
@@ -41,22 +39,9 @@ apply(inlet_biochem,2,mean, na.rm=TRUE)
 ```
 
 ```{r}
-
-```
-
-```{r}
 # across
-inlet_biochem |> 
+inlet_biochem %>% 
 summarize(
   across(where(is.numeric), mean, na.rm=TRUE)
   )
-```
-
-```{r}
-inlet_biochem
-```
-
-```{r}
-apply(inlet_biochem,2,mean)
-
 ```
