@@ -47,11 +47,16 @@ Store the base price of a burrito as `base_burrito` with a value of 6.50. Store 
 -   A steak burrito costs 3.25 more than a base burrito
 
 ```{r}
-base_burrito <- "veggie"
-switch(base_burrito,
-       "veggie" = print ("A veggie burrito is the cost of a base burrito"),
-       "chicken" = print ("A chicken burrito costs 3.00 more than a base burrito"),
-       "steak" = print ("A steak burrito costs 3.25 more than a base burrito"))
+
+main_ingrident <- "veggie"
+veggie <- 6.50
+chicken <- 6.50 + 3.00
+steak <- 6.50 + 3.25
+
+switch(main_ingrident,
+       "veggie" = print (veggie),
+       "chicken" = print (chicken),
+       "steak" = print (steak))
 ```
 
 ### **For loops**
@@ -70,8 +75,6 @@ for (i in seq_along(fish)){
   prop_fish = fish[i]/sum(fish)
   print(prop_fish)
 }
-
-
 ```
 
 #### **Task 5**

@@ -23,7 +23,6 @@ inlet_biochem
 ```
 
 ```{r}
-
 # for loop
 for (i in seq_along(inlet_biochem)) {
   if (is.numeric(inlet_biochem[[i]])) {
@@ -41,7 +40,5 @@ apply(inlet_biochem,2,mean, na.rm=TRUE)
 ```{r}
 # across
 inlet_biochem %>% 
-summarize(
-  across(where(is.numeric), mean, na.rm=TRUE)
-  )
+summarize(across(where(is.numeric), mean, na.rm=TRUE))
 ```
